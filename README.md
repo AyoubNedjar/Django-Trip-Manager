@@ -1,94 +1,112 @@
-Django Trip Manager
+# Django Trip Manager
+
 A Django web application developed in Python for managing trips and reservations. This application includes an admin interface for handling drivers, clients, routes, and reservations efficiently.
 
-Table of Contents
-Requirements
-Setup
-Project Creation
-Running the Application
-Usage
-License
-Requirements
-Python 3.x
-Django
-Setup
-Create a virtual environment:
+## Table of Contents
+1. [Requirements](#requirements)
+2. [Setup](#setup)
+3. [Project Creation](#project-creation)
+4. [Running the Application](#running-the-application)
+5. [Usage](#usage)
+6. [License](#license)
 
-bash
-Copier le code
-python -m venv .venv
-Activate the virtual environment:
+## Requirements
 
-On Windows:
+- Python 3.x
+- Django
 
-bash
-Copier le code
-Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -Force
-.\.venv\Scripts\activate
-On macOS/Linux:
+## Setup
 
-bash
-Copier le code
-source .venv/bin/activate
-Install Django and other dependencies:
+1. **Create a virtual environment:**
 
-bash
-Copier le code
-pip install django
-pip install ipython
-Freeze the installed packages into requirements.txt:
+    ```bash
+    python -m venv .venv
+    ```
 
-bash
-Copier le code
-pip freeze > requirements.txt
-Project Creation
-Start a new Django project:
+2. **Activate the virtual environment:**
 
-bash
-Copier le code
-python -m django startproject nomProjet
-Navigate into the project directory:
+    **On Windows:**
+    ```bash
+    Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -Force
+    .\.venv\Scripts\activate
+    ```
 
-bash
-Copier le code
-cd nomProjet
-Create a new Django app:
+    **On macOS/Linux:**
+    ```bash
+    source .venv/bin/activate
+    ```
 
-bash
-Copier le code
-python manage.py startapp nomApp
-Add the new app to settings.py:
+3. **Install Django and other dependencies:**
 
-Open nomProjet/settings.py and add 'nomApp.apps.NomAppConfig', to the INSTALLED_APPS list.
+    ```bash
+    pip install django
+    pip install ipython
+    ```
 
-Make migrations for the new app:
+4. **Freeze the installed packages into `requirements.txt`:**
 
-bash
-Copier le code
-python manage.py makemigrations nomApp
-Apply the migrations:
+    ```bash
+    pip freeze > requirements.txt
+    ```
 
-bash
-Copier le code
-python manage.py migrate
-Create a superuser for admin access:
+## Project Creation
 
-bash
-Copier le code
-python manage.py createsuperuser
-Run the development server:
+1. **Start a new Django project:**
 
-bash
-Copier le code
-python manage.py runserver
-Usage
-Access the admin interface:
+    ```bash
+    python -m django startproject nomProjet
+    ```
 
-Open a web browser and go to http://127.0.0.1:8000/admin to log in with the superuser credentials you created.
+2. **Navigate into the project directory:**
 
-Manage your trips and reservations:
+    ```bash
+    cd nomProjet
+    ```
 
-Use the admin interface to add, edit, and manage drivers, clients, routes, and reservations.
+3. **Create a new Django app:**
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+    ```bash
+    python manage.py startapp nomApp
+    ```
+
+4. **Add the new app to `settings.py`:**
+
+    Open `nomProjet/settings.py` and add `'nomApp.apps.NomAppConfig',` to the `INSTALLED_APPS` list.
+
+5. **Make migrations for the new app:**
+
+    ```bash
+    python manage.py makemigrations nomApp
+    ```
+
+6. **Apply the migrations:**
+
+    ```bash
+    python manage.py migrate
+    ```
+
+7. **Create a superuser for admin access:**
+
+    ```bash
+    python manage.py createsuperuser
+    ```
+
+8. **Run the development server:**
+
+    ```bash
+    python manage.py runserver
+    ```
+
+## Usage
+
+1. **Access the admin interface:**
+
+    Open a web browser and go to `http://127.0.0.1:8000/admin` to log in with the superuser credentials you created.
+
+2. **Manage your trips and reservations:**
+
+    Use the admin interface to add, edit, and manage drivers, clients, routes, and reservations.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
